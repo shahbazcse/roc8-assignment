@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { CalendarMain } from "../booking/calendar/CalendarMain";
 
 export const Calendar = () => {
     const [service, setService] = useState({
@@ -19,7 +20,9 @@ export const Calendar = () => {
                 <div className='service_name'>{service.name}</div>
                 <div className='timezone'><span>Timezone:</span> {service.timezone}</div>
             </div>
-            <div className='calendar_box_bottom'></div>
+            <div className='calendar_box_bottom'>
+                <CalendarMain />
+            </div>
         </div>
     )
 }
