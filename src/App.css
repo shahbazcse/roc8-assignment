@@ -131,6 +131,9 @@ body {
 }
 
 .booking_main_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 85%;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -139,8 +142,46 @@ body {
 .main_left {
   height: 100%;
   width: 50%;
-  background-color: #EBEBF0;
+  background-color: #ebebf0;
   border-radius: 12px 0px 0 0;
+}
+
+.calendar_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin: 4vh;
+}
+
+.calendar_box_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 8px;
+}
+
+.service_name {
+  font-size: 2.6vh;
+  font-weight: bold;
+}
+
+.timezone {
+  font-size: 1.5vh;
+}
+
+.timezone span {
+  color: rgb(110, 110, 110);
+  font-weight: bold;
+}
+
+.calendar_box_bottom {
+  height: 35vh;
+  width: 42vh;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .main_right {
