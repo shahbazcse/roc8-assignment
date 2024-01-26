@@ -115,3 +115,83 @@ body {
   height: 2vh;
   width: 2vh;
 }
+
+.booking_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking_main {
+  margin-top: 12vh;
+  height: 60vh;
+  width: 100vh;
+  border-radius: 12px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.booking_main_top {
+  height: 85%;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.main_left {
+  height: 100%;
+  width: 50%;
+  background-color: #EBEBF0;
+  border-radius: 12px 0px 0 0;
+}
+
+.main_right {
+  height: 100%;
+  width: 50%;
+}
+
+.booking_main_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vh;
+  background-color: #378760;
+  height: 15%;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+}
+
+.appointo_tag {
+  color: white;
+  font-size: 1.4vh;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+
+.tag_underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.next_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5vh 4vh;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: rgb(56, 56, 56);
+  opacity: 95%;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.next_btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px 4px;
+}
+
+.next_icon {
+  color: #378760;
+  scale: 150%;
+}
