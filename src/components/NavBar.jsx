@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className="nav">
             <div className="nav_left">
                 <img src={logo} alt="logo" className="app_logo" />
-                <div className="app_name">
+                <div className="flex flex-col justify-center align-start font-bold gap-[3px] hidden sm:block">
                     <div className="app_name_main">Appointr</div>
                     <div className="app_slogan">Your Appointment Buddy</div>
                 </div>
