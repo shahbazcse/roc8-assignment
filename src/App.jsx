@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <div className='pb-[4vh] md:pb-0'>
-        <Booking />
-      </div>
+      <Booking />
     </div>
   );
 }
