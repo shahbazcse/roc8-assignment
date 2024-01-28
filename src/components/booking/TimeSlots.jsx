@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../contexts/AppContext';
-import { formatDate } from '../../utils/utils';
+import { extractTimeAMPM } from '../../utils/utils';
 
 export const TimeSlots = () => {
     const { state } = useContext(AppContext);
@@ -11,8 +11,7 @@ export const TimeSlots = () => {
         day: "numeric",
     };
 
-    // const date = state.selectedDate?.toLocaleDateString("en-US", options) | "";
-    const date = "";
+    const date = state.selectedDate ? state.selectedDate?.toLocaleDateString("en-US", options) : "";
 
     return (
         <div className='flex flex-col justify-start gap-4 px-12 py-4 h-full w-full divide-y-2'>
@@ -30,7 +29,7 @@ export const TimeSlots = () => {
                     {state.timeslots.length ? (
                         state.timeslots[0].slots.map(({ start_time, end_time }, index) => (
                             <div key={index} className='flex justify-evenly items-center w-full px-4 py-2 border border border-[#378760] text-green-700 hover:bg-green-50 font-bold rounded-lg cursor-pointer hover:shadow-sm'>
-                                <div>{start_time} - {end_time}</div>
+                                <div className='tracking-wide'>{extractTimeAMPM(start_time)} - {extractTimeAMPM(end_time)}</div>
                                 {false && <div></div>}
                             </div>
                         ))
