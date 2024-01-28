@@ -30,7 +30,7 @@ export const extractTimeAMPM = (dateString) => {
 
     const hours12 = hours % 12 || 12;
 
-    const formattedTime = `${hours12}:${minutes.toString().padStart(2, '0')} ${period}`;
+    const formattedTime = `${String(hours12).length === 1 ? "0" : ""}${hours12}:${minutes.toString().padStart(2, '0')} ${period}`;
 
     return formattedTime;
 }
