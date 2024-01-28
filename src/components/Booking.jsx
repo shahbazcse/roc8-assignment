@@ -23,7 +23,7 @@ export const Booking = () => {
 
     return (
         <div className='pb-[4vh] md:pb-0'>
-            <div className='flex flex-col justify-center items-center shadow-md w-[95%] 2xl:w-[50%] mx-auto mt-[6vh] sm:mt-[10vh] rounded-xl'>
+            <div className='flex flex-col justify-center items-center shadow-md w-[95%] 2xl:w-[50%] mx-auto mt-[2vh] md:mt-[10vh] rounded-xl'>
                 <div className='flex flex-col md:flex-row h-full min-h-[56vh] lg:h-[48vh] w-full'>
                     <Calendar />
                     <TimeSlots />
