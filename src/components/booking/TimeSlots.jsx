@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../contexts/AppContext';
 import { formatDate } from '../../utils/utils';
-import { timeslots } from "../../services/data.js";
 
 export const TimeSlots = () => {
     const { state } = useContext(AppContext);
@@ -29,8 +28,8 @@ export const TimeSlots = () => {
                 <div className='text-gray-500 font-bold text-[1.4vh]'>{date} - AVAILABLE SLOTS</div>
                 <div className='flex flex-col justify-start items-center gap-4 py-1 px-2 min-h-[16vh] h-fit sm:max-h-[38vh] sm:overflow-y-scroll'>
                     {state.timeslots.length ? (
-                        state.timeslots[0].slots.map(({ start_time, end_time }) => (
-                            <div className='flex justify-evenly items-center w-full px-4 py-2 border border border-[#378760] text-green-700 hover:bg-green-50 font-bold rounded-lg cursor-pointer hover:shadow-sm'>
+                        state.timeslots[0].slots.map(({ start_time, end_time }, index) => (
+                            <div key={index} className='flex justify-evenly items-center w-full px-4 py-2 border border border-[#378760] text-green-700 hover:bg-green-50 font-bold rounded-lg cursor-pointer hover:shadow-sm'>
                                 <div>{start_time} - {end_time}</div>
                                 {false && <div></div>}
                             </div>

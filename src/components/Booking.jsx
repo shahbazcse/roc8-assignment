@@ -21,7 +21,7 @@ export const Booking = () => {
             const response = await getAllSlots(curr);
             dispatch({ type: "UPDATE_TIMESLOTS", payload: response });
         })();
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className='flex flex-col justify-center items-center shadow-md w-[95%] xl:w-[50%] mx-auto mt-[6vh] sm:mt-[10vh] rounded-xl'>
