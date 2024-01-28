@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AppContext } from "../../../contexts/AppContext";
+import { AppContext, initialState } from "../../../contexts/AppContext";
 import { formatDate } from "../../../utils/utils";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import {
@@ -64,6 +64,7 @@ export const CalendarMain = () => {
         dispatch({ type: "SELECT_DATE", payload: day });
         const response = await getAllSlots(formatDate(day));
         dispatch({ type: "UPDATE_TIMESLOTS", payload: response });
+        dispatch({ type: "SELECT_SLOT", payload: initialState.selectedSlot });
     }
 
     return (

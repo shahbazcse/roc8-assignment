@@ -26,17 +26,6 @@ export const AppProvider = ({ children }) => {
         }
     }
 
-    const initialState = {
-        timeslots: [],
-        selectedDate: "",
-        selectedSlot: {
-            slotDate: "",
-            duration: "",
-            start_time: "",
-            end_time: ""
-        }
-    };
-
     const [state, dispatch] = useReducer(reducerFn, initialState)
 
     return (
@@ -45,3 +34,14 @@ export const AppProvider = ({ children }) => {
         </AppContext.Provider>
     );
 }
+
+export const initialState = {
+    timeslots: [],
+    selectedDate: "",
+    selectedSlot: {
+        slotDate: "",
+        duration: "",
+        start_time: "",
+        end_time: ""
+    }
+};
