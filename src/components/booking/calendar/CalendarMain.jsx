@@ -89,7 +89,7 @@ export const CalendarMain = () => {
                     <MdArrowForwardIos className="w-7 h-7 text-[#378760] rounded-full p-1 hover:bg-gray-200" aria-hidden="true" />
                 </button>
             </div>
-            <div className="px-1">
+            <div className="px-3 md:px-2">
                 <div className="grid grid-cols-7 mt-4 text-md leading-6 text-center text-[#378760]">
                     <div>Sun</div>
                     <div>Mon</div>

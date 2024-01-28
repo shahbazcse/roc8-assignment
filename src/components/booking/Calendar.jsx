@@ -8,11 +8,11 @@ export const Calendar = () => {
     });
 
     useEffect(() => {
-        setService({
-            ...service,
+        setService((prev) => ({
+            ...prev,
             name: "Test Service",
             timezone: "Asia/Calcutta"
-        });
+        }));
     }, []);
     return (
         <div className='flex flex-col justify-center gap-4 p-[3vh] h-full w-full bg-[#EBEBF0] rounded-t-xl md:rounded-tl-xl md:rounded-tr-[0]'>
