@@ -61,7 +61,7 @@ export const TimeSlots = () => {
                                 className={`${slotStyle(
                                     start_time,
                                     end_time
-                                )} flex items-center w-full px-4 py-2 border border-[#378760] font-bold rounded-lg cursor-pointer hover:shadow-sm`}
+                                )} flex items-center w-full px-4 py-2 border border-[#378760] font-bold rounded-lg cursor-pointer hover:shadow-sm duration-500`}
                             >
                                 <div className="tracking-wide">
                                     {extractTimeAMPM(start_time)} - {extractTimeAMPM(end_time)}
