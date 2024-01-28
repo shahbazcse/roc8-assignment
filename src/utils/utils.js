@@ -1,12 +1,13 @@
 export const formatDate = (current) => {
-    return `${current.getFullYear()}-${current.getMonth() + 1}-${current.getDate()}`
+    const date = new Date(current);
+    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
 }
 
-export const getNextDate = () => {
-    const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-    return tomorrow;
+export const getNextDate = (today) => {
+    const currentDay = new Date(today);
+    const nextDay = new Date(today);
+    nextDay.setDate(currentDay.getDate() + 1);
+    return nextDay;
 }
 
 export const getCurrentDate = (currentDate) => {
