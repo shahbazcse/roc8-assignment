@@ -20,9 +20,7 @@ export const Calendar = () => {
                 <div className='font-bold text-[2.6vh]'>{service.name}</div>
                 <div className='text-gray-600 text-[1.5vh]'><span className='font-bold'>Timezone:</span> {service.timezone}</div>
             </div>
-            <div className='min-h-[42vh] h-fit border-black border'>
-                <CalendarMain />
-            </div>
+            <CalendarMain />
         </div>
     )
 }
