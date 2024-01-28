@@ -67,8 +67,8 @@ export const CalendarMain = () => {
     }
 
     return (
-        <div className="bg-white rounded-xl shadow-sm border border-2 border-gray-300">
-            <div className="flex justify-between items-center mx-6 pt-4">
+        <div className="bg-white rounded-xl shadow-sm border border-2 border-gray-300 font-bold divide-y">
+            <div className="flex justify-between items-center mx-6 py-4">
                 <button
                     type="button"
                     onClick={previousMonth}
@@ -77,7 +77,7 @@ export const CalendarMain = () => {
                     <span className="sr-only">Previous month</span>
                     <MdArrowBackIos className="w-7 h-7 text-[#378760] pl-2 rounded-full hover:bg-gray-200" aria-hidden="true" />
                 </button>
-                <div className="font-semibold text-gray-900 text-center">
+                <div className="font-bold text-lg text-gray-900 text-center">
                     {format(firstDayCurrentMonth, "MMMM yyyy").toLocaleUpperCase()}
                 </div>
                 <button
@@ -89,64 +89,66 @@ export const CalendarMain = () => {
                     <MdArrowForwardIos className="w-7 h-7 text-[#378760] rounded-full p-1 hover:bg-gray-200" aria-hidden="true" />
                 </button>
             </div>
-            <div className="grid grid-cols-7 mt-10 text-xs leading-6 text-center text-gray-500">
-                <div>S</div>
-                <div>M</div>
-                <div>T</div>
-                <div>W</div>
-                <div>T</div>
-                <div>F</div>
-                <div>S</div>
-            </div>
-            <div className="grid grid-cols-7 mt-2 text-sm">
-                {days.map((day, dayIdx) => (
-                    <div
-                        key={day.toString()}
-                        className={classNames(
-                            dayIdx === 0 && colStartClasses[getDay(day)],
-                            "py-1.5"
-                        )}
-                    >
-                        <button
-                            type="button"
-                            onClick={() => handleSelectDate(day)}
+            <div className="px-1">
+                <div className="grid grid-cols-7 mt-4 text-md leading-6 text-center text-[#378760]">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thr</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div className="grid grid-cols-7 mt-2 text-md">
+                    {days.map((day, dayIdx) => (
+                        <div
+                            key={day.toString()}
                             className={classNames(
-                                isEqual(day, selectedDay) && "text-white",
-                                !isEqual(day, selectedDay) &&
-                                isToday(day) &&
-                                "text-red-500",
-                                !isEqual(day, selectedDay) &&
-                                !isToday(day) &&
-                                isSameMonth(day, firstDayCurrentMonth) &&
-                                "text-gray-900",
-                                !isEqual(day, selectedDay) &&
-                                !isToday(day) &&
-                                !isSameMonth(day, firstDayCurrentMonth) &&
-                                "text-gray-400",
-                                isEqual(day, selectedDay) && isToday(day) && "bg-red-500",
-                                isEqual(day, selectedDay) &&
-                                !isToday(day) &&
-                                "bg-gray-900",
-                                !isEqual(day, selectedDay) && "hover:bg-gray-200",
-                                (isEqual(day, selectedDay) || isToday(day)) &&
-                                "font-semibold",
-                                "mx-auto flex h-8 w-8 items-center justify-center rounded-full"
+                                dayIdx === 0 && colStartClasses[getDay(day)],
+                                "py-1.5"
                             )}
                         >
-                            <time dateTime={format(day, "yyyy-MM-dd")}>
-                                {format(day, "d")}
-                            </time>
-                        </button>
-
-                        <div className="w-1 h-1 mx-auto mt-1">
-                            {meetings.some((meeting) =>
-                                isSameDay(parseISO(meeting.startDatetime), day)
-                            ) && (
-                                    <div className="w-1 h-1 rounded-full bg-sky-500"></div>
+                            <button
+                                type="button"
+                                onClick={() => handleSelectDate(day)}
+                                className={classNames(
+                                    isEqual(day, selectedDay) && "text-white",
+                                    !isEqual(day, selectedDay) &&
+                                    isToday(day) &&
+                                    "text-red-500",
+                                    !isEqual(day, selectedDay) &&
+                                    !isToday(day) &&
+                                    isSameMonth(day, firstDayCurrentMonth) &&
+                                    "text-gray-900",
+                                    !isEqual(day, selectedDay) &&
+                                    !isToday(day) &&
+                                    !isSameMonth(day, firstDayCurrentMonth) &&
+                                    "text-gray-400",
+                                    isEqual(day, selectedDay) && isToday(day) && "bg-[#378760]",
+                                    isEqual(day, selectedDay) &&
+                                    !isToday(day) &&
+                                    "bg-[#378760]",
+                                    !isEqual(day, selectedDay) && "hover:bg-gray-200",
+                                    (isEqual(day, selectedDay) || isToday(day)) &&
+                                    "font-semibold",
+                                    "mx-auto flex px-4 py-1 items-center justify-center rounded-full"
                                 )}
+                            >
+                                <time dateTime={format(day, "yyyy-MM-dd")}>
+                                    {format(day, "dd")}
+                                </time>
+                            </button>
+
+                            <div className="w-1 h-1 mx-auto mt-1">
+                                {meetings.some((meeting) =>
+                                    isSameDay(parseISO(meeting.startDatetime), day)
+                                ) && (
+                                        <div className="w-1 h-1 rounded-full bg-sky-500"></div>
+                                    )}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
