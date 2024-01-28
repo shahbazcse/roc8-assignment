@@ -37,7 +37,7 @@ let colStartClasses = [
 ];
 
 export const CalendarMain = () => {
-    const { state, dispatch } = useContext(AppContext);
+    const { dispatch } = useContext(AppContext);
 
     let today = startOfToday();
     let [selectedDay, setSelectedDay] = useState(today);
