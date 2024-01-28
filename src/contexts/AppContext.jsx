@@ -31,7 +31,9 @@ export const AppProvider = ({ children }) => {
         selectedDate: "",
         selectedSlot: {
             slotDate: "",
-            duration: ""
+            duration: "",
+            start_time: "",
+            end_time: ""
         }
     };
 

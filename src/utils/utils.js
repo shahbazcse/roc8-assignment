@@ -9,6 +9,17 @@ export const getNextDate = () => {
     return tomorrow;
 }
 
+export const getCurrentDate = (currentDate) => {
+    const options = {
+        weekday: "long",
+        month: "short",
+        day: "numeric",
+    };
+
+    const date = currentDate ? currentDate?.toLocaleDateString("en-US", options) : "";
+    return date;
+}
+
 export const extractTimeAMPM = (dateString) => {
     const dateObject = new Date(dateString);
 
