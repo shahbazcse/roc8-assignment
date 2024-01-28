@@ -11,3 +11,7 @@ export const getAllSlots = async (currentDate) => {
         console.log("Error:", e.message);
     }
 }
+
+export const makeBooking = (bookingDetails) => {
+    console.log(bookingDetails);
+}
