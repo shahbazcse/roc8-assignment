@@ -73,7 +73,9 @@ export const TimeSlots = () => {
                         ))
                     ) : state.error === "" ? (
                         <div className="mt-16 md:mt-auto text-gray-500">
-                            {state.timeslots.length === 0 ? "Loading..." : "No Slots Available"}
+                            {state.timeslots.length === 0
+                                ? "Loading..."
+                                : "No Slots Available"}
                         </div>
                     ) : (
                         <div className="my-auto text-center md:mt-20 text-red-500 font-bold px-6 py-8 opacity-[70%] bg-red-200 rounded-lg border border-red-300">

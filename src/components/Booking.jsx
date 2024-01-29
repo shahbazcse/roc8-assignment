@@ -23,7 +23,7 @@ export const Booking = () => {
             if (response.status === 200) {
                 dispatch({ type: "UPDATE_TIMESLOTS", payload: response.data });
             } else {
-                dispatch({ type: "SET_ERROR", payload: response.message })
+                dispatch({ type: "SET_ERROR", payload: response.message });
             }
         })();
     }, [dispatch]);
@@ -45,8 +45,8 @@ export const Booking = () => {
                     <div
                         onClick={handleBooking}
                         className={`flex justify-center items-center gap-2 px-8 py-2.5 rounded-lg text-gray-700 bg-white ${selectedSlot.slotDate !== ""
-                            ? "cursor-pointer hover:shadow-xl hover:bg-gray-800 hover:text-white duration-500"
-                            : "cursor-not-allowed"
+                                ? "cursor-pointer hover:shadow-xl hover:bg-gray-800 hover:text-white duration-500"
+                                : "cursor-not-allowed"
                             }`}
                     >
                         <div className="font-bold">Next</div>

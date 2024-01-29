@@ -14,7 +14,10 @@ const NavBar = () => {
                     <div className="text-[0.8rem]">Your Appointment Buddy</div>
                 </div>
             </div>
-            <RxHamburgerMenu onClick={() => { }} className="flex h-9 w-9 mr-2 md:hidden" />
+            <RxHamburgerMenu
+                onClick={() => { }}
+                className="flex h-9 w-9 mr-2 md:hidden"
+            />
             <div className="md:flex justify-center items-center gap-6 hidden">
                 <div className="flex justify-center items-center gap-2.5 text-lg font-bold cursor-pointer text-[#0a1d56]">
                     <div>Menu</div>

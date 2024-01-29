@@ -68,9 +68,9 @@ export const CalendarMain = () => {
             dispatch({ type: "UPDATE_TIMESLOTS", payload: response.data });
             dispatch({ type: "SELECT_SLOT", payload: initialState.selectedSlot });
         } else {
-            dispatch({ type: "SET_ERROR", payload: response.message })
+            dispatch({ type: "SET_ERROR", payload: response.message });
         }
-    }
+    };
 
     return (
         <div className="bg-white rounded-xl shadow-sm border border-2 border-gray-300 font-bold divide-y">
@@ -81,7 +81,10 @@ export const CalendarMain = () => {
                     className="-my-1.5 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500"
                 >
                     <span className="sr-only">Previous month</span>
-                    <MdArrowBackIos className="w-7 h-7 text-[#378760] pl-2 rounded-full hover:bg-gray-200" aria-hidden="true" />
+                    <MdArrowBackIos
+                        className="w-7 h-7 text-[#378760] pl-2 rounded-full hover:bg-gray-200"
+                        aria-hidden="true"
+                    />
                 </button>
                 <div className="font-bold text-lg text-gray-900 text-center">
                     {format(firstDayCurrentMonth, "MMMM yyyy").toLocaleUpperCase()}
@@ -92,7 +95,10 @@ export const CalendarMain = () => {
                     className="-my-1.5 -mr-1.5 ml-2 flex flex-none items-center justify-center p-1.5 text-gray-400 hover:text-gray-500"
                 >
                     <span className="sr-only">Next month</span>
-                    <MdArrowForwardIos className="w-7 h-7 text-[#378760] rounded-full p-1 hover:bg-gray-200" aria-hidden="true" />
+                    <MdArrowForwardIos
+                        className="w-7 h-7 text-[#378760] rounded-full p-1 hover:bg-gray-200"
+                        aria-hidden="true"
+                    />
                 </button>
             </div>
             <div className="px-3 md:px-2">
@@ -119,9 +125,7 @@ export const CalendarMain = () => {
                                 onClick={() => handleSelectDate(day)}
                                 className={classNames(
                                     isEqual(day, selectedDay) && "text-white",
-                                    !isEqual(day, selectedDay) &&
-                                    isToday(day) &&
-                                    "text-red-500",
+                                    !isEqual(day, selectedDay) && isToday(day) && "text-red-500",
                                     !isEqual(day, selectedDay) &&
                                     !isToday(day) &&
                                     isSameMonth(day, firstDayCurrentMonth) &&
@@ -131,9 +135,7 @@ export const CalendarMain = () => {
                                     !isSameMonth(day, firstDayCurrentMonth) &&
                                     "text-gray-400",
                                     isEqual(day, selectedDay) && isToday(day) && "bg-[#378760]",
-                                    isEqual(day, selectedDay) &&
-                                    !isToday(day) &&
-                                    "bg-[#378760]",
+                                    isEqual(day, selectedDay) && !isToday(day) && "bg-[#378760]",
                                     !isEqual(day, selectedDay) && "hover:bg-gray-200",
                                     (isEqual(day, selectedDay) || isToday(day)) &&
                                     "font-semibold",
@@ -148,9 +150,7 @@ export const CalendarMain = () => {
                             <div className="w-1 h-1 mx-auto mt-1">
                                 {meetings.some((meeting) =>
                                     isSameDay(parseISO(meeting.startDatetime), day)
-                                ) && (
-                                        <div className="w-1 h-1 rounded-full bg-sky-500"></div>
-                                    )}
+                                ) && <div className="w-1 h-1 rounded-full bg-sky-500"></div>}
                             </div>
                         </div>
                     ))}
