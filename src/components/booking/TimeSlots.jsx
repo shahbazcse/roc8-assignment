@@ -33,7 +33,7 @@ export const TimeSlots = () => {
     return (
         <div className="flex flex-col justify-start gap-4 px-12 py-4 h-full w-full divide-y-2">
             <div className="flex flex-col gap-2">
-                <div className="text-gray-700 font-bold text-[1.4vh]">
+                <div className="text-gray-700 font-bold text-xs">
                     SELECT FROM VARIANTS
                 </div>
                 <select
@@ -47,10 +47,10 @@ export const TimeSlots = () => {
                 </select>
             </div>
             <div className="flex flex-col gap-2 pt-3">
-                <div className="text-gray-700 font-bold text-[1.4vh]">
+                <div className="text-gray-700 font-bold text-xs">
                     {getCurrentDate(state.selectedDate)} - AVAILABLE SLOTS
                 </div>
-                <div className="flex flex-col justify-start items-center gap-4 py-1 px-2 min-h-[16vh] h-fit sm:max-h-[36vh] sm:overflow-y-scroll">
+                <div className="flex flex-col justify-start items-center gap-4 py-1 px-2 min-h-[10rem] h-fit sm:max-h-[22rem] sm:overflow-y-scroll">
                     {state.timeslots.length ? (
                         state.timeslots[0].slots.map(({ start_time, end_time }, index) => (
                             <div
