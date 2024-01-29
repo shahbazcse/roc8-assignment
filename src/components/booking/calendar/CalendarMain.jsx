@@ -62,9 +62,14 @@ export const CalendarMain = () => {
     const handleSelectDate = async (day) => {
         setSelectedDay(day);
         dispatch({ type: "SELECT_DATE", payload: day });
+        dispatch({ type: "UPDATE_TIMESLOTS", payload: initialState.timeslots });
         const response = await getAllSlots(formatDate(day));
-        dispatch({ type: "UPDATE_TIMESLOTS", payload: response });
-        dispatch({ type: "SELECT_SLOT", payload: initialState.selectedSlot });
+        if (response.status === 200) {
+            dispatch({ type: "UPDATE_TIMESLOTS", payload: response.data });
+            dispatch({ type: "SELECT_SLOT", payload: initialState.selectedSlot });
+        } else {
+            dispatch({ type: "SET_ERROR", payload: response.message })
+        }
     }
 
     return (

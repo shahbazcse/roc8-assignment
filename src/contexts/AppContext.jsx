@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
             case "SELECT_DATE":
                 return {
                     ...state,
-                    selectedDate: action.payload
+                    selectedDate: action.payload,
                 }
             case "SELECT_SLOT":
                 return {
@@ -19,7 +19,12 @@ export const AppProvider = ({ children }) => {
             case "UPDATE_TIMESLOTS":
                 return {
                     ...state,
-                    timeslots: action.payload
+                    timeslots: action.payload,
+                }
+            case "SET_ERROR":
+                return {
+                    ...state,
+                    error: action.payload
                 }
             default:
                 return state
@@ -43,5 +48,6 @@ export const initialState = {
         duration: "",
         start_time: "",
         end_time: ""
-    }
+    },
+    error: ""
 };

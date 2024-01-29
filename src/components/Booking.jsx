@@ -20,7 +20,11 @@ export const Booking = () => {
             const curr = new Date();
             dispatch({ type: "SELECT_DATE", payload: curr });
             const response = await getAllSlots(curr);
-            dispatch({ type: "UPDATE_TIMESLOTS", payload: response });
+            if (response.status === 200) {
+                dispatch({ type: "UPDATE_TIMESLOTS", payload: response.data });
+            } else {
+                dispatch({ type: "SET_ERROR", payload: response.message })
+            }
         })();
     }, [dispatch]);
 

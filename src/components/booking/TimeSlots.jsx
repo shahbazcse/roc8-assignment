@@ -51,7 +51,7 @@ export const TimeSlots = () => {
                     {getCurrentDate(state.selectedDate)} - AVAILABLE SLOTS
                 </div>
                 <div className="flex flex-col justify-start items-center gap-4 py-1 px-2 min-h-[10rem] h-fit sm:max-h-[22rem] sm:overflow-y-scroll">
-                    {state.timeslots.length ? (
+                    {state.timeslots?.length ? (
                         state.timeslots[0].slots.map(({ start_time, end_time }, index) => (
                             <div
                                 key={index}
@@ -71,9 +71,13 @@ export const TimeSlots = () => {
                                 )}
                             </div>
                         ))
-                    ) : (
+                    ) : state.error === "" ? (
                         <div className="mt-6 md:mt-auto text-gray-500">
-                            No Slots Available
+                            {state.timeslots.length === 0 ? "Loading..." : "No Slots Available"}
+                        </div>
+                    ) : (
+                        <div className="my-auto text-center md:mt-20 text-red-500 font-bold px-6 py-8 opacity-[70%] bg-red-200 rounded-lg border border-red-300">
+                            {state.error}
                         </div>
                     )}
                 </div>
