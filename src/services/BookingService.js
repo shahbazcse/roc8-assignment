@@ -19,5 +19,5 @@ export const getAllSlots = async (currentDate) => {
 };
 
 export const makeBooking = (bookingDetails) => {
-    console.log(bookingDetails);
+
 };
