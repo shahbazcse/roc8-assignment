@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CalendarMain } from "../booking/calendar/CalendarMain";
+import { CalendarMain } from "./CalendarMain";
 
 export const Calendar = () => {
     const [service, setService] = useState({

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { Calendar } from "./booking/Calendar";
-import { TimeSlots } from "./booking/TimeSlots";
+import { Calendar } from "./booking/calendar/Calendar";
+import { TimeSlots } from "./booking/timeslots/TimeSlots";
 import { getAllSlots, makeBooking } from "../services/BookingService";
 import { AppContext } from "../contexts/AppContext";
 

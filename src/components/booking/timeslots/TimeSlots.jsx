@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { AppContext } from "../../contexts/AppContext";
-import { extractTimeAMPM, getCurrentDate } from "../../utils/utils";
+import { AppContext } from "../../../contexts/AppContext";
+import { extractTimeAMPM, getCurrentDate } from "../../../utils/utils";
 import { FaRegCircleCheck } from "react-icons/fa6";
 
 export const TimeSlots = () => {
