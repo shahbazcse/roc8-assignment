@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+<h1 align="center">Appointr</br><sub align="center">Your Appointment Buddy</sub></h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Live App: https://appointr.vercel.app
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Appointr](#orbix)
+  - [Table of Contents](#table-of-contents)
+  - [About Appointr](#about-appointr)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
 
-### `npm start`
+## About Appointr
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Appointr is an innovative appointment booking application designed to streamline the process of scheduling appointments for businesses and individuals alike. With its user-friendly interface and comprehensive features, Appointr makes it easy to manage appointments efficiently and effectively.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Key Features
 
-### `npm test`
+#### Date and Time Selection
+Appointr allows users to select their preferred date and time for appointments with ease. The intuitive calendar interface enables users to view availability and choose the most convenient slot for their schedule.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Flexible Time Slots
+One of the standout features of Appointr is its flexibility in time slot duration. Users can select from various appointment durations such as 30 minutes, 45 minutes, or 60 minutes, catering to different types of appointments and ensuring optimal time management.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run Appointr locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository: git clone [https://github.com/shahbazcse/roc8-assignment](https://github.com/shahbazcse/roc8-assignment/)
+2. Install the dependencies: npm install
+3. Start the development server: npm start
+4. Open your web browser and visit: http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+Before you begin, make sure you have the following prerequisites installed on your system:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+• **Node.js and npm**: You can download and install Node.js and npm from nodejs.org.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+• **Git**: You'll need Git to clone the project repository. You can download it from git-scm.com.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contributions are welcome! If you would like to enhance or add new features to Appointr, please follow these steps:
 
-## Learn More
+1. Fork the repository
+2. Create a new branch: git checkout -b feature/your-feature-name
+3. Make your changes
+4. Commit your changes: git commit -m 'Add your commit message'
+5. Push to the branch: git push origin feature/your-feature-name
+6. Open a pull request
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit/) file for details.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+If you have any questions or suggestions regarding Appointr, please feel free to reach out at cseshahbaz@gmail.com
